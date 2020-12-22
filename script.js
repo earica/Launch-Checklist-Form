@@ -10,31 +10,34 @@ window.addEventListener("load", function() {
          let missionTarget = document.getElementById("missionTarget");
          missionTarget.innerHTML= "<h2>Mission Destination</h2>";
 
+         
+         let i = Math.floor(Math.random() * Math.floor(5));
+
          let ol  = document.createElement('ol');
    
          let li = document.createElement('li');
-         li.textContent= `Name: ${json[2].name}`;
+         li.textContent= `Name: ${json[i].name}`;
          ol.appendChild(li);
 
          li = document.createElement('li');
-         li.textContent= `Diameter: ${json[2].diameter}`;
+         li.textContent= `Diameter: ${json[i].diameter}`;
          ol.appendChild(li);
 
         li = document.createElement('li');
-         li.textContent= `Star: ${json[2].star}`;
+         li.textContent= `Star: ${json[i].star}`;
          ol.appendChild(li);
          missionTarget.appendChild(ol);
 
          li = document.createElement('li');
-         li.textContent= `Distance from Earth: ${json[2].distance}`;
+         li.textContent= `Distance from Earth: ${json[i].distance}`;
          ol.appendChild(li);
 
          li = document.createElement('li');
-         li.textContent= `Number of Moons: ${json[2].moons}`;
+         li.textContent= `Number of Moons: ${json[i].moons}`;
          ol.appendChild(li);
 
          let img = document.createElement('img');
-         img.src=`${json[2].image}`;
+         img.src=`${json[i].image}`;
          ol.appendChild(img);
 
          });
